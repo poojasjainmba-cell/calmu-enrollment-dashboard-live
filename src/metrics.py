@@ -108,6 +108,8 @@ def starts_count(
     contact_starts = _sum_bool(contacts, "is_started")
     if contact_starts:
         return contact_starts, "HubSpot start fields"
+    if not contacts.empty:
+        return None, "Unavailable from HubSpot start fields"
     if is_all_terms(selected_term) and current_state and current_state.get("current_starts") is not None:
         return int(float(current_state["current_starts"])), "Budget workbook current-state fallback"
     if not starts.empty:
