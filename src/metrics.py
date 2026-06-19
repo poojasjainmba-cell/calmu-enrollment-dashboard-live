@@ -51,10 +51,9 @@ def _selected_goals(goals: pd.DataFrame, selected_term: str | None = None, entit
 def contact_summary(contacts: pd.DataFrame) -> dict[str, int | float | None]:
     total_leads = int(len(contacts))
     applicants = _sum_bool(contacts, "is_applicant")
-    crm_enrolled = _sum_bool(contacts, "is_crm_enrolled")
+    enrolled = _sum_bool(contacts, "is_crm_enrolled")
     contacted = _sum_bool(contacts, "is_contacted")
     bad_leads = _sum_bool(contacts, "is_bad_lead")
-    actual_enrolled = _sum_bool(contacts, "is_actual_enrolled")
     starts = _sum_bool(contacts, "is_started")
     return {
         "total_leads": total_leads,
@@ -62,13 +61,13 @@ def contact_summary(contacts: pd.DataFrame) -> dict[str, int | float | None]:
         "lead_to_contact_pct": safe_div(contacted, total_leads),
         "applicants": applicants,
         "lead_to_applicant_pct": safe_div(applicants, total_leads),
-        "crm_enrolled": crm_enrolled,
-        "lead_to_crm_enrolled_pct": safe_div(crm_enrolled, total_leads),
-        "lead_to_enrolled_pct": safe_div(actual_enrolled or crm_enrolled, total_leads),
-        "lead_to_enrolled_basis": "Actual enrolled" if actual_enrolled else "CRM enrolled",
+        "crm_enrolled": enrolled,
+        "lead_to_crm_enrolled_pct": safe_div(enrolled, total_leads),
+        "lead_to_enrolled_pct": safe_div(enrolled, total_leads),
+        "lead_to_enrolled_basis": "Lifecycle Stage = Enrolled",
         "bad_leads": bad_leads,
         "bad_lead_rate": safe_div(bad_leads, total_leads),
-        "actual_enrolled_from_contacts": actual_enrolled,
+        "actual_enrolled_from_contacts": enrolled,
         "starts_from_contacts": starts,
     }
 
@@ -80,9 +79,9 @@ def actual_enrollment_count(
     selected_term: str | None,
     current_state: dict[str, object] | None = None,
 ) -> tuple[int | None, str]:
-    contact_actual = _sum_bool(contacts, "is_actual_enrolled")
+    contact_actual = _sum_bool(contacts, "is_crm_enrolled")
     if contact_actual:
-        return contact_actual, "HubSpot actual enrollment fields"
+        return contact_actual, "HubSpot Lifecycle Stage = Enrolled"
 
     if is_all_terms(selected_term) and current_state and current_state.get("current_enrolled") is not None:
         return int(float(current_state["current_enrolled"])), "Budget workbook current-state fallback"
@@ -204,7 +203,7 @@ def aggregate_contacts(contacts: pd.DataFrame, group_col: str) -> pd.DataFrame:
             contacted=("is_contacted", "sum"),
             applicants=("is_applicant", "sum"),
             crm_enrolled=("is_crm_enrolled", "sum"),
-            actual_enrollments=("is_actual_enrolled", "sum"),
+            actual_enrollments=("is_crm_enrolled", "sum"),
             starts=("is_started", "sum"),
             bad_leads=("is_bad_lead", "sum"),
         )

@@ -257,8 +257,8 @@ def metric_grid(kpis: dict[str, object]) -> None:
     row1[0].metric("Total leads", fmt_int(kpis["total_leads"]))
     row1[1].metric("Contacted", fmt_int(kpis["contacted"]), fmt_pct(kpis["lead_to_contact_pct"]))
     row1[2].metric("Applicants", fmt_int(kpis["applicants"]), fmt_pct(kpis["lead_to_applicant_pct"]))
-    row1[3].metric("CRM enrolled", fmt_int(kpis["crm_enrolled"]), fmt_pct(kpis["lead_to_crm_enrolled_pct"]))
-    row1[4].metric("Actual enrolled", fmt_int(kpis["actual_enrollments"]))
+    row1[3].metric("Lifecycle enrolled", fmt_int(kpis["crm_enrolled"]), fmt_pct(kpis["lead_to_crm_enrolled_pct"]))
+    row1[4].metric("Enrolled", fmt_int(kpis["actual_enrollments"]))
     row1[5].metric("Starts", fmt_int(kpis["starts"]), fmt_pct(kpis["start_pct"]))
 
     row2 = st.columns(6)
@@ -416,12 +416,11 @@ def page_quality(contacts: pd.DataFrame, enrollments: pd.DataFrame, goals: pd.Da
         st.markdown(
             """
             - Applicant = Lifecycle Stage equals Applicant.
-            - CRM Enrolled = Lifecycle Stage equals Enrolled.
-            - Actual Enrolled = verified enrollment field/status from HubSpot if available; otherwise reference fallback only.
+            - Enrolled = Lifecycle Stage equals Enrolled.
             - Starts = students who actually started and did not drop before starting.
             - Bad Lead = Lifecycle Stage equals Not a Lead or requested bad lead statuses.
             - Lead-to-contact uses Last Activity Date or the requested progressed lead-status fallback.
-            - Lead-to-enrolled uses actual enrolled when available, otherwise CRM enrolled and is labeled CRM-only.
+            - Lead-to-enrolled uses Lifecycle Stage equals Enrolled divided by total leads.
             - Time to enroll = enrollment date minus contact create date, or reference tracker days-to-enroll when HubSpot date is unavailable.
             - Avg talk time = average HubSpot call duration for associated calls.
             """

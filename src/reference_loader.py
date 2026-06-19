@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from email import policy
 from email.parser import BytesParser
@@ -20,6 +21,8 @@ REFERENCE_NAMES = {
     "enrollment_tracker": "Summer2tracker.xlsx",
     "weekly_email": "Summer 2 Enrollment Update – Week 6 June 8-12.eml",
 }
+
+STATIC_GOAL_DIR = Path(__file__).resolve().parents[1] / "data" / "static"
 
 
 @dataclass
@@ -108,6 +111,30 @@ def _email_note(source: str | Path | BinaryIO) -> str:
         return f"Weekly update email could not be parsed: {exc}"
 
 
+def _read_static_goals() -> GoalParseResult:
+    goals_path = STATIC_GOAL_DIR / "2026_goals.csv"
+    starts_path = STATIC_GOAL_DIR / "2026_starts.csv"
+    current_state_path = STATIC_GOAL_DIR / "2026_current_state.json"
+    if not goals_path.exists() or not current_state_path.exists():
+        return GoalParseResult(pd.DataFrame(), pd.DataFrame(), {}, [], ["No budget workbook provided."])
+
+    goals = pd.read_csv(goals_path)
+    starts = pd.read_csv(starts_path) if starts_path.exists() else pd.DataFrame()
+    metadata = json.loads(current_state_path.read_text())
+    numeric_columns = ["budget_total", "variance", "pct_to_goal", "sort_order", "actual", "goal"]
+    for frame in [goals, starts]:
+        for column in numeric_columns:
+            if column in frame:
+                frame[column] = pd.to_numeric(frame[column], errors="coerce")
+    return GoalParseResult(
+        goals=goals,
+        starts=starts,
+        current_state=metadata.get("current_state", {}),
+        parsed_term_columns=metadata.get("parsed_term_columns", []),
+        parse_issues=metadata.get("parse_issues", []),
+    )
+
+
 def load_reference_bundle(paths: dict[str, str | Path | BinaryIO]) -> ReferenceBundle:
     contact_frames: list[pd.DataFrame] = []
     source_rows: dict[str, int] = {}
@@ -131,10 +158,14 @@ def load_reference_bundle(paths: dict[str, str | Path | BinaryIO]) -> ReferenceB
         enrollments = _enrollment_sheet(paths["enrollment_tracker"])
         source_rows["Enrollment tracker"] = len(enrollments)
 
-    goal_result = GoalParseResult(pd.DataFrame(), pd.DataFrame(), {}, [], ["No budget workbook provided."])
     if paths.get("budget"):
         goal_result = load_goal_workbook(paths["budget"])
         source_rows["Budget workbook goals"] = len(goal_result.goals)
+        parse_issues.extend(goal_result.parse_issues)
+    else:
+        goal_result = _read_static_goals()
+        if not goal_result.goals.empty:
+            source_rows["Static 2026 budget goals"] = len(goal_result.goals)
         parse_issues.extend(goal_result.parse_issues)
 
     if paths.get("weekly_email"):

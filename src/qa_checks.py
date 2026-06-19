@@ -60,14 +60,13 @@ def run_qa_checks(
         negative = int((enrollments["days_to_enroll"].dropna() < 0).sum())
         checks.append(_row("Negative days to enroll", "Pass" if negative == 0 else "Fail", f"{negative:,} enrollment rows have negative days to enroll.", "High" if negative else "Info"))
 
-    crm_enrolled = int(contacts.get("is_crm_enrolled", pd.Series(dtype=bool)).fillna(False).sum()) if not contacts.empty else 0
-    actual_enrolled = len(enrollments) if not enrollments.empty else int(contacts.get("is_actual_enrolled", pd.Series(dtype=bool)).fillna(False).sum()) if not contacts.empty else 0
-    if crm_enrolled and actual_enrolled:
-        checks.append(_row("CRM enrolled vs actual enrollment count", "Pass" if crm_enrolled >= actual_enrolled else "Warning", f"CRM enrolled: {crm_enrolled:,}; actual enrollments: {actual_enrolled:,}.", "Warning" if crm_enrolled < actual_enrolled else "Info"))
+    lifecycle_enrolled = int(contacts.get("is_crm_enrolled", pd.Series(dtype=bool)).fillna(False).sum()) if not contacts.empty else 0
+    if not contacts.empty:
+        checks.append(_row("Lifecycle Stage enrolled count", "Pass", f"{lifecycle_enrolled:,} contacts have Lifecycle Stage = Enrolled.", "Info"))
 
     start_count = int(starts["actual"].dropna().sum()) if not starts.empty and "actual" in starts else 0
-    if actual_enrolled and start_count:
-        checks.append(_row("Enrolled count vs starts count", "Pass" if start_count <= actual_enrolled else "Warning", f"Actual enrollments: {actual_enrolled:,}; starts: {start_count:,}.", "Warning" if start_count > actual_enrolled else "Info"))
+    if lifecycle_enrolled and start_count:
+        checks.append(_row("Enrolled count vs starts count", "Pass" if start_count <= lifecycle_enrolled else "Warning", f"Lifecycle enrolled: {lifecycle_enrolled:,}; starts: {start_count:,}.", "Warning" if start_count > lifecycle_enrolled else "Info"))
 
     if not goals.empty:
         goal_udrs = set(goals.loc[goals["entity_type"].eq("UDR"), "entity_key"].dropna())

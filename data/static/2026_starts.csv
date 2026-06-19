@@ -1,0 +1,13 @@
+sheet,section,metric,term_code,term_label,sort_order,actual,goal,raw_actual_column,raw_goal_column
+Sheet1,Domestic/VA-UDRs,Starts,SP1,Spring 1,11,66.0,,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,Starts,SP2,Spring 2,12,63.0,,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,Starts,SU1,Summer 1,21,71.0,,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,Starts,SU2,Summer 2,22,106.0,,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,Starts,FA1,Fall 1,31,12.0,,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,Starts,FA2,Fall 2,32,,,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,Start%,SP1,Spring 1,11,0.7586206896551724,,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,Start%,SP2,Spring 2,12,0.6774193548387096,,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,Start%,SU1,Summer 1,21,0.6396396396396397,,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,Start%,SU2,Summer 2,22,0.9814814814814815,,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,Start%,FA1,Fall 1,31,1.0,,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,Start%,FA2,Fall 2,32,,,FA2 -A,FA2 -G

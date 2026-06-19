@@ -34,6 +34,10 @@ CONTACTED_STATUSES = {
     "enrolled",
 }
 
+APPLICANT_LIFECYCLE_STAGES = {"applicant", "opportunity"}
+ENROLLED_LIFECYCLE_STAGES = {"enrolled", "145758586"}
+STARTED_LIFECYCLE_STAGES = {"active student", "customer"}
+
 COLUMN_ALIASES = {
     "record_id": ["record id", "hs_object_id", "object id", "vid", "id"],
     "first_name": ["first name", "firstname"],
@@ -200,21 +204,20 @@ def normalize_contacts(df: pd.DataFrame, source_system: str = "HubSpot") -> pd.D
 def add_contact_flags(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
     lifecycle = out["lifecycle_stage"].map(lower_text)
+    lifecycle_raw = out["lifecycle_stage_raw"].map(lower_text) if "lifecycle_stage_raw" in out else lifecycle
     lead_status = out["lead_status"].map(lower_text)
-    enrollment_status = out["enrollment_status"].map(lower_text)
     start_status = out["start_status"].map(lower_text)
 
-    out["is_applicant"] = lifecycle.eq("applicant")
-    out["is_crm_enrolled"] = lifecycle.eq("enrolled")
+    out["is_applicant"] = lifecycle.isin(APPLICANT_LIFECYCLE_STAGES) | lifecycle_raw.isin(APPLICANT_LIFECYCLE_STAGES)
+    out["is_crm_enrolled"] = lifecycle.isin(ENROLLED_LIFECYCLE_STAGES) | lifecycle_raw.isin(ENROLLED_LIFECYCLE_STAGES)
     out["is_bad_lead"] = lifecycle.eq("not a lead") | lead_status.isin(BAD_LEAD_STATUSES)
     out["is_contacted"] = out["last_activity_date"].notna() | lead_status.isin(CONTACTED_STATUSES)
-    out["is_actual_enrolled"] = (
-        enrollment_status.str.contains("enroll|active|confirmed", na=False)
-        | out["enrolled_date"].notna()
-    )
+    out["is_actual_enrolled"] = out["is_crm_enrolled"]
     out["is_started"] = (
         start_status.str.contains("started|active|attended", na=False)
         | out["start_date"].notna()
+        | lifecycle.isin(STARTED_LIFECYCLE_STAGES)
+        | lifecycle_raw.isin(STARTED_LIFECYCLE_STAGES)
     )
     out.loc[out["is_bad_lead"], "is_contacted"] = False
     return out

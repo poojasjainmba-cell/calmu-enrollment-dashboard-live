@@ -1,0 +1,31 @@
+{
+  "current_state": {
+    "annual_goal": 858.0,
+    "annual_goal_source": "Sheet1!C4",
+    "current_enrolled": 411.0,
+    "current_enrolled_source": "Sheet1!C5",
+    "current_starts": 318.0,
+    "current_starts_source": "Sheet1!C6",
+    "current_start_pct": 0.7737226277372263,
+    "current_start_pct_source": "Sheet1!C7"
+  },
+  "parsed_term_columns": [
+    "SP-1 A",
+    "SP1-G",
+    "SP2-A",
+    "SP2-G",
+    "SU1-A",
+    "SU1-G",
+    "SU2 -A",
+    "SU2- G",
+    "FA1- A",
+    "FA1 -G",
+    "FA2 -A",
+    "FA2 -G",
+    "SU2-G",
+    "FA1-G"
+  ],
+  "parse_issues": [
+    "74 goal rows have an unpaired actual or goal column in the budget workbook."
+  ]
+}

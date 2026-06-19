@@ -9,17 +9,17 @@ from .brand import COLORS, PLOTLY_TEMPLATE
 
 LABEL_OVERRIDES = {
     "udr": "UDR",
-    "crm_enrolled": "CRM Enrolled",
+    "crm_enrolled": "Lifecycle Enrolled",
     "lead_to_contact_pct": "Lead-to-Contact %",
     "lead_to_applicant_pct": "Lead-to-Applicant %",
-    "lead_to_crm_enrolled_pct": "Lead-to-CRM Enrolled %",
+    "lead_to_crm_enrolled_pct": "Lead-to-Lifecycle Enrolled %",
     "lead_to_enrolled_pct": "Lead-to-Enrolled %",
     "bad_lead_rate": "Bad Lead Rate",
     "pct_to_goal": "% to Goal",
     "selected_term_actual": "Actual",
     "selected_term_goal": "Goal",
     "variance_to_goal": "Variance to Goal",
-    "actual_enrollments": "Actual Enrolled",
+    "actual_enrollments": "Enrolled",
     "tracker_actual_enrollments": "Tracker Actual Enrolled",
     "activity_count": "Activity Count",
     "avg_talk_time": "Avg Talk Time",
@@ -135,7 +135,7 @@ def goal_variance(df: pd.DataFrame, title: str) -> go.Figure:
 
 
 def conversion_funnel(kpis: dict[str, object]) -> go.Figure:
-    labels = ["Leads", "Contacted", "Applicants", "CRM Enrolled"]
+    labels = ["Leads", "Contacted", "Applicants", "Enrolled"]
     values = [
         kpis.get("total_leads") or 0,
         kpis.get("contacted") or 0,

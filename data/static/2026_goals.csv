@@ -1,0 +1,165 @@
+sheet,section,entity_type,entity,entity_key,budget_total,variance,pct_to_goal,term_code,term_label,sort_order,actual,goal,raw_actual_column,raw_goal_column
+Sheet1,Domestic/VA-UDRs,UDR,Jordan King,jordan king,107.0,-7.0,0.5625,SP1,Spring 1,11,9.0,16.0,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,UDR,Jordan King,jordan king,107.0,-1.0,0.9333333333333333,SP2,Spring 2,12,14.0,15.0,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,UDR,Jordan King,jordan king,107.0,1.0,1.0625,SU1,Summer 1,21,17.0,16.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Jordan King,jordan king,107.0,-6.0,0.7,SU2,Summer 2,22,14.0,20.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Jordan King,jordan king,107.0,-19.0,0.05,FA1,Fall 1,31,1.0,20.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Jordan King,jordan king,107.0,,0.0,FA2,Fall 2,32,,24.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Ian Matheson,ian matheson,107.0,0.0,1.0,SP1,Spring 1,11,16.0,16.0,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,UDR,Ian Matheson,ian matheson,107.0,0.0,1.0,SP2,Spring 2,12,15.0,15.0,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,UDR,Ian Matheson,ian matheson,107.0,-16.0,0.0,SU1,Summer 1,21,0.0,16.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Elijah Gardere,elijah gardere,107.0,-7.0,0.5625,SP1,Spring 1,11,9.0,16.0,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,UDR,Elijah Gardere,elijah gardere,107.0,1.0,1.0666666666666667,SP2,Spring 2,12,16.0,15.0,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,UDR,Elijah Gardere,elijah gardere,107.0,4.0,1.25,SU1,Summer 1,21,20.0,16.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Elijah Gardere,elijah gardere,107.0,-11.0,0.45,SU2,Summer 2,22,9.0,20.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Elijah Gardere,elijah gardere,107.0,,0.0,FA1,Fall 1,31,,20.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Elijah Gardere,elijah gardere,107.0,,0.0,FA2,Fall 2,32,,24.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Tasha Berger,tasha berger,107.0,4.0,1.25,SP1,Spring 1,11,20.0,16.0,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,UDR,Tasha Berger,tasha berger,107.0,3.0,1.2,SP2,Spring 2,12,18.0,15.0,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,UDR,Tasha Berger,tasha berger,107.0,4.0,1.25,SU1,Summer 1,21,20.0,16.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Tasha Berger,tasha berger,107.0,3.0,1.15,SU2,Summer 2,22,23.0,20.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Tasha Berger,tasha berger,107.0,-15.0,0.25,FA1,Fall 1,31,5.0,20.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Tasha Berger,tasha berger,107.0,,0.0,FA2,Fall 2,32,,18.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Roni Moore,roni moore,107.0,6.0,1.6,SP1,Spring 1,11,16.0,10.0,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,UDR,Roni Moore,roni moore,107.0,1.0,1.0666666666666667,SP2,Spring 2,12,16.0,15.0,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,UDR,Roni Moore,roni moore,107.0,4.0,1.25,SU1,Summer 1,21,20.0,16.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Roni Moore,roni moore,107.0,-3.0,0.85,SU2,Summer 2,22,17.0,20.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Roni Moore,roni moore,107.0,-18.0,0.1,FA1,Fall 1,31,2.0,20.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Roni Moore,roni moore,107.0,,0.0,FA2,Fall 2,32,,21.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Ericka Noche,ericka noche,107.0,7.0,1.7,SP1,Spring 1,11,17.0,10.0,SP-1 A,SP1-G
+Sheet1,Domestic/VA-UDRs,UDR,Ericka Noche,ericka noche,107.0,-1.0,0.9333333333333333,SP2,Spring 2,12,14.0,15.0,SP2-A,SP2-G
+Sheet1,Domestic/VA-UDRs,UDR,Ericka Noche,ericka noche,107.0,3.0,1.1875,SU1,Summer 1,21,19.0,16.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Ericka Noche,ericka noche,107.0,1.0,1.05,SU2,Summer 2,22,21.0,20.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Ericka Noche,ericka noche,107.0,,0.0,FA1,Fall 1,31,,20.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Ericka Noche,ericka noche,107.0,,0.0,FA2,Fall 2,32,,22.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Sonia Calderon,sonia calderon,48.0,1.0,1.2,SU1,Summer 1,21,6.0,5.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Sonia Calderon,sonia calderon,48.0,-3.0,0.75,SU2,Summer 2,22,9.0,12.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Sonia Calderon,sonia calderon,48.0,-14.0,0.06666666666666667,FA1,Fall 1,31,1.0,15.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Sonia Calderon,sonia calderon,48.0,,0.0,FA2,Fall 2,32,,18.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Michelle Curiel,michelle curiel,48.0,4.0,1.8,SU1,Summer 1,21,9.0,5.0,SU1-A,SU1-G
+Sheet1,Domestic/VA-UDRs,UDR,Michelle Curiel,michelle curiel,48.0,1.0,1.0833333333333333,SU2,Summer 2,22,13.0,12.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Michelle Curiel,michelle curiel,48.0,-12.0,0.2,FA1,Fall 1,31,3.0,15.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Michelle Curiel,michelle curiel,48.0,,0.0,FA2,Fall 2,32,,18.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Joseph Hancock,joseph hancock,30.0,-5.0,0.16666666666666666,SU2,Summer 2,22,1.0,6.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Joseph Hancock,joseph hancock,30.0,,0.0,FA1,Fall 1,31,,12.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Joseph Hancock,joseph hancock,30.0,,0.0,FA2,Fall 2,32,,12.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Oby Alexandra,oby alexandra,30.0,,0.0,SU2,Summer 2,22,,6.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Oby Alexandra,oby alexandra,30.0,,0.0,FA1,Fall 1,31,,12.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Oby Alexandra,oby alexandra,30.0,,0.0,FA2,Fall 2,32,,12.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Aaron Moreno,aaron moreno,30.0,-4.0,0.2,SU2,Summer 2,22,1.0,5.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Aaron Moreno,aaron moreno,30.0,,0.0,FA1,Fall 1,31,,12.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Aaron Moreno,aaron moreno,30.0,,0.0,FA2,Fall 2,32,,12.0,FA2 -A,FA2 -G
+Sheet1,Domestic/VA-UDRs,UDR,Adrienne Cota,adrienne cota,30.0,,0.0,SU2,Summer 2,22,,5.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Adrienne Cota,adrienne cota,30.0,,0.0,FA1,Fall 1,31,,10.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Crystal Cassidy,crystal cassidy,,,0.0,SU2,Summer 2,22,,5.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Crystal Cassidy,crystal cassidy,,,0.0,FA1,Fall 1,31,,10.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Tatiana Mancias,tatiana mancias,,,0.0,SU2,Summer 2,22,,5.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Tatiana Mancias,tatiana mancias,,,0.0,FA1,Fall 1,31,,10.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Janie Garza,janie garza,,,0.0,SU2,Summer 2,22,,5.0,SU2 -A,SU2- G
+Sheet1,Domestic/VA-UDRs,UDR,Janie Garza,janie garza,,,0.0,FA1,Fall 1,31,,12.0,FA1- A,FA1 -G
+Sheet1,Domestic/VA-UDRs,UDR,Janie Garza,janie garza,,,0.0,FA2,Fall 2,32,,12.0,FA2 -A,FA2 -G
+Sheet1,Leads by SPM/ML,Source,Eddie Briseno,eddie briseno,,,,SP1,Spring 1,11,1480.0,,SP-1 A,SP1-G
+Sheet1,Leads by SPM/ML,Source,Eddie Briseno,eddie briseno,,,,SP2,Spring 2,12,325.0,,SP2-A,SP2-G
+Sheet1,Leads by SPM/ML,Source,Eddie Briseno,eddie briseno,,-436.0,0.7093333333333334,SU1,Summer 1,21,1064.0,1500.0,SU1-A,SU1-G
+Sheet1,Leads by SPM/ML,Source,Eddie Briseno,eddie briseno,,-821.0,0.31583333333333335,SU2,Summer 2,22,379.0,1200.0,SU2 -A,SU2-G
+Sheet1,Leads by SPM/ML,Source,Kara Sturdenvant,kara sturdenvant,,,,SP1,Spring 1,11,60.0,,SP-1 A,SP1-G
+Sheet1,Leads by SPM/ML,Source,Kara Sturdenvant,kara sturdenvant,,,,SP2,Spring 2,12,532.0,,SP2-A,SP2-G
+Sheet1,Leads by SPM/ML,Source,Kara Sturdenvant,kara sturdenvant,,714.0,2.19,SU1,Summer 1,21,1314.0,600.0,SU1-A,SU1-G
+Sheet1,Leads by SPM/ML,Source,Kara Sturdenvant,kara sturdenvant,,1451.0,3.4183333333333334,SU2,Summer 2,22,2051.0,600.0,SU2 -A,SU2-G
+Sheet1,Leads by SPM/ML,Source,Karyl Regis,karyl regis,,,,SP1,Spring 1,11,119.0,,SP-1 A,SP1-G
+Sheet1,Leads by SPM/ML,Source,Karyl Regis,karyl regis,,,,SP2,Spring 2,12,501.0,,SP2-A,SP2-G
+Sheet1,Leads by SPM/ML,Source,Karyl Regis,karyl regis,,39.0,1.078,SU1,Summer 1,21,539.0,500.0,SU1-A,SU1-G
+Sheet1,Leads by SPM/ML,Source,Karyl Regis,karyl regis,,-427.0,0.146,SU2,Summer 2,22,73.0,500.0,SU2 -A,SU2-G
+Sheet1,Leads by SPM/ML,Source,Nathen Camacho,nathen camacho,,-75.0,0.625,SU2,Summer 2,22,125.0,200.0,SU2 -A,SU2-G
+Sheet1,Leads by SPM/ML,Source,Oby,oby,,-149.0,0.255,SU2,Summer 2,22,51.0,200.0,SU2 -A,SU2-G
+Sheet1,Leads by SPM/ML,Source,Hire GI,hire gi,,,,SP1,Spring 1,11,29.0,,SP-1 A,SP1-G
+Sheet1,Leads by SPM/ML,Source,Hire GI,hire gi,,,,SP2,Spring 2,12,349.0,,SP2-A,SP2-G
+Sheet1,Leads by SPM/ML,Source,Hire GI,hire gi,,-194.0,0.7228571428571429,SU1,Summer 1,21,506.0,700.0,SU1-A,SU1-G
+Sheet1,Leads by SPM/ML,Source,Hire GI,hire gi,,-437.0,0.3757142857142857,SU2,Summer 2,22,263.0,700.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Eddie Briseno,eddie briseno,100.0,5.0,1.4166666666666667,SP1,Spring 1,11,17.0,12.0,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Eddie Briseno,eddie briseno,100.0,-5.0,0.7058823529411765,SP2,Spring 2,12,12.0,17.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Eddie Briseno,eddie briseno,100.0,-4.0,0.7647058823529411,SU1,Summer 1,21,13.0,17.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Eddie Briseno,eddie briseno,100.0,-13.0,0.23529411764705882,SU2,Summer 2,22,4.0,17.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Eddie Briseno,eddie briseno,100.0,,0.0,FA1,Fall 1,31,,20.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Eddie Briseno,eddie briseno,100.0,,0.0,FA2,Fall 2,32,,17.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Kara Sturdevant,kara sturdevant,91.0,1.0,1.0833333333333333,SP1,Spring 1,11,13.0,12.0,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Kara Sturdevant,kara sturdevant,91.0,0.0,1.0,SP2,Spring 2,12,15.0,15.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Kara Sturdevant,kara sturdevant,91.0,11.0,1.7333333333333334,SU1,Summer 1,21,26.0,15.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Kara Sturdevant,kara sturdevant,91.0,6.0,1.4,SU2,Summer 2,22,21.0,15.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Kara Sturdevant,kara sturdevant,91.0,,0.0,FA1,Fall 1,31,,18.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Kara Sturdevant,kara sturdevant,91.0,,0.0,FA2,Fall 2,32,,16.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Karyl Regis,karyl regis,32.0,-3.0,0.5714285714285714,SP1,Spring 1,11,4.0,7.0,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Karyl Regis,karyl regis,32.0,-3.0,0.4,SP2,Spring 2,12,2.0,5.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Karyl Regis,karyl regis,32.0,-1.0,0.8,SU1,Summer 1,21,4.0,5.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Karyl Regis,karyl regis,32.0,5.0,2.0,SU2,Summer 2,22,10.0,5.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Karyl Regis,karyl regis,32.0,,0.0,FA1,Fall 1,31,,6.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Karyl Regis,karyl regis,32.0,,0.0,FA2,Fall 2,32,,5.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Nathen Camacho,nathen camacho,,-4.0,0.2,SU2,Summer 2,22,1.0,5.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Oby Alexandra,oby alexandra,,,0.0,SU2,Summer 2,22,,5.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Sports,sports,38.0,,,SP1,Spring 1,11,7.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Sports,sports,38.0,0.0,1.0,SP2,Spring 2,12,1.0,1.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Sports,sports,38.0,2.0,3.0,SU1,Summer 1,21,3.0,1.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Sports,sports,38.0,1.0,2.0,SU2,Summer 2,22,2.0,1.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Sports,sports,38.0,-23.0,0.08,FA1,Fall 1,31,2.0,25.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Sports,sports,38.0,,0.0,FA2,Fall 2,32,,10.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Referral,referral,109.0,,,SP1,Spring 1,11,11.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Referral,referral,109.0,1.0,1.0666666666666667,SP2,Spring 2,12,16.0,15.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Referral,referral,109.0,-4.0,0.7777777777777778,SU1,Summer 1,21,14.0,18.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Referral,referral,109.0,-3.0,0.8636363636363636,SU2,Summer 2,22,19.0,22.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Referral,referral,109.0,-27.0,0.1,FA1,Fall 1,31,3.0,30.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Referral,referral,109.0,,0.0,FA2,Fall 2,32,,24.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Juliene's Events,juliene s events,7.0,,,SP1,Spring 1,11,3.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Juliene's Events,juliene s events,7.0,0.0,1.0,SP2,Spring 2,12,3.0,3.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Juliene's Events,juliene s events,7.0,-1.0,0.5,SU1,Summer 1,21,1.0,2.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Juliene's Events,juliene s events,7.0,0.0,1.0,SU2,Summer 2,22,2.0,2.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Juliene's Events,juliene s events,7.0,,,FA1,Fall 1,31,,0.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Juliene's Events,juliene s events,7.0,,,FA2,Fall 2,32,,0.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Viqtory,viqtory,8.0,,,SP1,Spring 1,11,4.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Viqtory,viqtory,8.0,3.0,1.75,SP2,Spring 2,12,7.0,4.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Viqtory,viqtory,8.0,3.0,2.5,SU1,Summer 1,21,5.0,2.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Viqtory,viqtory,8.0,,0.0,SU2,Summer 2,22,,2.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Viqtory,viqtory,8.0,,,FA1,Fall 1,31,,0.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Viqtory,viqtory,8.0,,,FA2,Fall 2,32,,0.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Falcon,falcon,56.0,,,SP1,Spring 1,11,5.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Falcon,falcon,56.0,5.0,1.5555555555555556,SP2,Spring 2,12,14.0,9.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Falcon,falcon,56.0,8.0,1.8,SU1,Summer 1,21,18.0,10.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Falcon,falcon,56.0,5.0,1.5,SU2,Summer 2,22,15.0,10.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Falcon,falcon,56.0,-13.0,0.13333333333333333,FA1,Fall 1,31,2.0,15.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Falcon,falcon,56.0,,0.0,FA2,Fall 2,32,,12.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Social Media,social media,39.0,,,SP1,Spring 1,11,1.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Social Media,social media,39.0,-2.0,0.5,SP2,Spring 2,12,2.0,4.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Social Media,social media,39.0,,0.0,SU1,Summer 1,21,,5.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Social Media,social media,39.0,-8.0,0.2,SU2,Summer 2,22,2.0,10.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Social Media,social media,39.0,,0.0,FA1,Fall 1,31,,12.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Social Media,social media,39.0,,0.0,FA2,Fall 2,32,,8.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Alumni,alumni,57.0,,,SP1,Spring 1,11,3.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Alumni,alumni,57.0,-3.0,0.5,SP2,Spring 2,12,3.0,6.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Alumni,alumni,57.0,3.0,1.375,SU1,Summer 1,21,11.0,8.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Alumni,alumni,57.0,-1.0,0.9166666666666666,SU2,Summer 2,22,11.0,12.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Alumni,alumni,57.0,-14.0,0.06666666666666667,FA1,Fall 1,31,1.0,15.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Alumni,alumni,57.0,,0.0,FA2,Fall 2,32,,16.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Call-In,call in,,,,SU1,Summer 1,21,2.0,,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Call-In,call in,,,,SU2,Summer 2,22,1.0,,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Website,website,75.0,,,SP1,Spring 1,11,12.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Website,website,75.0,-3.0,0.7,SP2,Spring 2,12,7.0,10.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Website,website,75.0,-4.0,0.6666666666666666,SU1,Summer 1,21,8.0,12.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Website,website,75.0,2.0,1.1666666666666667,SU2,Summer 2,22,14.0,12.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Website,website,75.0,-12.0,0.2,FA1,Fall 1,31,3.0,15.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Website,website,75.0,,0.0,FA2,Fall 2,32,,14.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Town Hall,town hall,35.0,,,SP1,Spring 1,11,4.0,,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,Town Hall,town hall,35.0,-3.0,0.4,SP2,Spring 2,12,2.0,5.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,Town Hall,town hall,35.0,,0.0,SU1,Summer 1,21,,5.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Town Hall,town hall,35.0,,0.0,SU2,Summer 2,22,,5.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Town Hall,town hall,35.0,,0.0,FA1,Fall 1,31,,8.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Town Hall,town hall,35.0,,0.0,FA2,Fall 2,32,,8.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Linkedin Ads,linkedin ads,15.0,,0.0,SU1,Summer 1,21,,3.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,Linkedin Ads,linkedin ads,15.0,,0.0,SU2,Summer 2,22,,3.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,Linkedin Ads,linkedin ads,15.0,,0.0,FA1,Fall 1,31,,5.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,Linkedin Ads,linkedin ads,15.0,,0.0,FA2,Fall 2,32,,4.0,FA2 -A,FA2 -G
+Sheet1,Enrollments by SPM/ML,Source,Vinyl,vinyl,,,,SU1,Summer 1,21,1.0,,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,HireGi,hiregi,87.0,-9.0,0.25,SP1,Spring 1,11,3.0,12.0,SP-1 A,SP1-G
+Sheet1,Enrollments by SPM/ML,Source,HireGi,hiregi,87.0,4.0,1.8,SP2,Spring 2,12,9.0,5.0,SP2-A,SP2-G
+Sheet1,Enrollments by SPM/ML,Source,HireGi,hiregi,87.0,-5.0,0.5,SU1,Summer 1,21,5.0,10.0,SU1-A,SU1-G
+Sheet1,Enrollments by SPM/ML,Source,HireGi,hiregi,87.0,-9.0,0.4,SU2,Summer 2,22,6.0,15.0,SU2 -A,SU2-G
+Sheet1,Enrollments by SPM/ML,Source,HireGi,hiregi,87.0,-19.0,0.05,FA1,Fall 1,31,1.0,20.0,FA1- A,FA1-G
+Sheet1,Enrollments by SPM/ML,Source,HireGi,hiregi,87.0,,0.0,FA2,Fall 2,32,,25.0,FA2 -A,FA2 -G

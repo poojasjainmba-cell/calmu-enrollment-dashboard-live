@@ -23,7 +23,9 @@ The budget workbook parser validates:
 - Start rate fallback: about `77.37%`
 - Term actual/goal columns including `SP-1 A`, `SP1-G`, `SP2-A`, `SP2-G`, `SU1-A`, `SU1-G`, `SU2 -A`, `SU2- G`, `FA1- A`, `FA1 -G`, `FA2 -A`, `FA2 -G`
 
-HubSpot verified enrollment/start fields take priority when available. The workbook values are labeled as fallback/reference when used.
+HubSpot Lifecycle Stage is the source of truth for Applicant and Enrolled. Workbook values are labeled as fallback/reference when used for goals and current-state context.
+
+For Streamlit Cloud, parsed 2026 goal/current-state values are committed in `data/static/` so goals remain available without local workbook access. Uploaded or local reference workbooks still override the static goal fallback.
 
 ## HubSpot Scopes
 
@@ -85,13 +87,12 @@ In Advanced settings, paste the `HUBSPOT_ACCESS_TOKEN` entry into the Secrets fi
 ## Definitions
 
 - Applicant = Lifecycle Stage equals `Applicant`.
-- CRM Enrolled = Lifecycle Stage equals `Enrolled`.
-- Actual Enrolled = verified enrollment field/status from HubSpot if available; otherwise fallback/reference only.
+- Enrolled = Lifecycle Stage equals `Enrolled`.
 - Starts = students who actually started and did not drop before starting.
 - Bad Lead = Lifecycle Stage equals `Not a Lead` or Lead Status is `Dead Lead`, `Do Not Contact`, `Duplicate Lead`, or `App Submitted - Unqualified`.
 - Lead-to-contact = contacted/progressed leads divided by total leads.
 - Lead-to-applicant = applicants divided by total leads.
-- Lead-to-enrolled = actual enrolled divided by total leads when actual is available; otherwise CRM enrolled divided by total leads and labeled CRM-only.
+- Lead-to-enrolled = Lifecycle Stage equals `Enrolled` divided by total leads.
 - Start % = starts divided by enrolled.
 - Time to enroll = enrollment date minus contact create date, or tracker days-to-enroll fallback.
 - Avg talk time = average HubSpot call duration for associated calls.

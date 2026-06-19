@@ -131,9 +131,23 @@ class HubSpotClient:
                     "type": prop.get("type", ""),
                     "fieldType": prop.get("fieldType", ""),
                     "description": prop.get("description", ""),
+                    "options": prop.get("options", []),
                 }
             )
         return pd.DataFrame(rows)
+
+    def property_option_labels(self, properties: pd.DataFrame, property_name: str | None) -> dict[str, str]:
+        if not property_name or properties.empty or "name" not in properties:
+            return {}
+        matched = properties[properties["name"].astype(str).eq(str(property_name))]
+        if matched.empty:
+            return {}
+        options = matched.iloc[0].get("options") or []
+        return {
+            str(option.get("value")): str(option.get("label"))
+            for option in options
+            if option.get("value") is not None and option.get("label") is not None
+        }
 
     def select_contact_properties(self, properties: pd.DataFrame) -> dict[str, str]:
         if properties.empty:
@@ -186,6 +200,9 @@ class HubSpotClient:
         return owners, issues
 
     def fetch_contacts(self, properties: list[str], max_pages: int | None = None) -> list[dict[str, Any]]:
+        if max_pages:
+            return self.search_contacts(properties, max_pages=max_pages)
+
         records: list[dict[str, Any]] = []
         after = None
         pages = 0
@@ -205,6 +222,29 @@ class HubSpotClient:
             pages += 1
             after = data.get("paging", {}).get("next", {}).get("after")
             if not after or (max_pages and pages >= max_pages):
+                break
+        return records
+
+    def search_contacts(self, properties: list[str], max_pages: int) -> list[dict[str, Any]]:
+        records: list[dict[str, Any]] = []
+        after = None
+        pages = 0
+        while True:
+            payload: dict[str, Any] = {
+                "limit": 100,
+                "properties": sorted(set(properties)),
+                "sorts": [{"propertyName": "createdate", "direction": "DESCENDING"}],
+            }
+            if after:
+                payload["after"] = after
+            data = self._request("POST", "/crm/v3/objects/contacts/search", json=payload)
+            for item in data.get("results", []):
+                row = {"id": item.get("id"), "createdAt": item.get("createdAt"), "updatedAt": item.get("updatedAt")}
+                row.update(item.get("properties") or {})
+                records.append(row)
+            pages += 1
+            after = data.get("paging", {}).get("next", {}).get("after")
+            if not after or pages >= max_pages:
                 break
         return records
 
@@ -256,6 +296,13 @@ class HubSpotClient:
         raw = raw.rename(columns=reverse_map)
         if "id" in raw.columns and "record_id" not in raw.columns:
             raw["record_id"] = raw["id"]
+        if "lifecycle_stage" in raw.columns:
+            lifecycle_labels = self.property_option_labels(properties, property_map.get("lifecycle_stage"))
+            if lifecycle_labels:
+                raw["lifecycle_stage_raw"] = raw["lifecycle_stage"]
+                raw["lifecycle_stage"] = raw["lifecycle_stage"].map(
+                    lambda value: value if value is None or pd.isna(value) else lifecycle_labels.get(str(value), value)
+                )
         if "udr" in raw.columns and owner_map:
             raw["udr"] = raw["udr"].astype("string").map(lambda value: owner_map.get(str(value), str(value)))
 
