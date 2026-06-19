@@ -1,0 +1,13 @@
+.env
+.venv/
+.streamlit/secrets.toml
+data/reference/
+data/raw/
+exports/
+local_exports/
+.streamlit/cache/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+tmp/
