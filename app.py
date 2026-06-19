@@ -50,6 +50,7 @@ PAGES = [
 ]
 
 TERM_OPTIONS = ["All Terms", "Spring 1", "Spring 2", "Summer 1", "Summer 2", "Fall 1", "Fall 2"]
+STATIC_REFERENCE_VERSION = "2026-static-goals-v1"
 
 
 def secret_or_env(key: str, default: str = "") -> str:
@@ -93,7 +94,8 @@ def fetch_hubspot_data(
 
 
 @st.cache_data(show_spinner=False)
-def load_local_reference_bundle(reference_dir: str | None) -> ReferenceBundle:
+def load_local_reference_bundle(reference_dir: str | None, static_reference_version: str) -> ReferenceBundle:
+    del static_reference_version
     return load_reference_bundle(find_reference_files(reference_dir))
 
 
@@ -154,7 +156,10 @@ def _optional_int_secret(key: str) -> int | None:
 def load_data(data_mode: str, refresh_key: int) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, HubSpotFetchResult, ReferenceBundle, bool, str]:
     token = secret_or_env("HUBSPOT_ACCESS_TOKEN")
     reference_dir = secret_or_env("REFERENCE_DIR", "")
-    bundle = combine_reference_bundles(load_local_reference_bundle(reference_dir or None), uploaded_reference_bundle())
+    bundle = combine_reference_bundles(
+        load_local_reference_bundle(reference_dir or None, STATIC_REFERENCE_VERSION),
+        uploaded_reference_bundle(),
+    )
 
     hubspot_result = empty_hubspot_result()
     live_requested = data_mode in {"Auto", "Live HubSpot"}
@@ -283,7 +288,7 @@ def page_executive(contacts: pd.DataFrame, enrollments: pd.DataFrame, goals: pd.
     kpis = executive_kpis(contacts, enrollments, goals, starts, activities, selected_term, current_state)
     metric_grid(kpis)
     st.caption(
-        f"Actual enrolled: {kpis['actual_enrollments_source']}. Starts: {kpis['starts_source']}. Goal: {kpis['enrollment_goal_source']}."
+        f"Enrolled: {kpis['actual_enrollments_source']}. Starts: {kpis['starts_source']}. Goal: {kpis['enrollment_goal_source']}."
     )
 
     udr = udr_performance(contacts, goals, enrollments, activities, selected_term)
