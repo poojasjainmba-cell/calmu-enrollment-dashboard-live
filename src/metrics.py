@@ -10,11 +10,14 @@ def is_all_terms(selected_term: str | None) -> bool:
 
 
 def safe_div(numerator: float | int | None, denominator: float | int | None) -> float | None:
-    if denominator in (None, 0) or pd.isna(denominator):
+    if denominator is None or pd.isna(denominator):
+        return None
+    denominator = float(denominator)
+    if denominator == 0:
         return None
     if numerator is None or pd.isna(numerator):
         numerator = 0
-    return float(numerator) / float(denominator)
+    return float(numerator) / denominator
 
 
 def first_nonzero(*values: object) -> object | None:
