@@ -17,6 +17,19 @@ def safe_div(numerator: float | int | None, denominator: float | int | None) -> 
     return float(numerator) / float(denominator)
 
 
+def first_nonzero(*values: object) -> object | None:
+    for value in values:
+        if value is None or pd.isna(value):
+            continue
+        try:
+            if float(value) == 0:
+                continue
+        except (TypeError, ValueError):
+            pass
+        return value
+    return None
+
+
 def _sum_bool(df: pd.DataFrame, column: str) -> int:
     if df.empty or column not in df:
         return 0
@@ -281,7 +294,10 @@ def _attach_activity_and_time(
     out["activities_per_lead"] = out.apply(lambda row: safe_div(row.get("activity_count"), row.get("leads")), axis=1)
     out["activities_per_applicant"] = out.apply(lambda row: safe_div(row.get("activity_count"), row.get("applicants")), axis=1)
     out["activities_per_enrollment"] = out.apply(
-        lambda row: safe_div(row.get("activity_count"), row.get("actual_enrollments") or row.get("tracker_actual_enrollments") or row.get("crm_enrolled")),
+        lambda row: safe_div(
+            row.get("activity_count"),
+            first_nonzero(row.get("actual_enrollments"), row.get("tracker_actual_enrollments"), row.get("crm_enrolled")),
+        ),
         axis=1,
     )
     return out
@@ -495,7 +511,7 @@ def term_performance(contacts: pd.DataFrame, enrollments: pd.DataFrame, goals: p
         base = base.merge(start_terms, on="term_label", how="outer")
     base["variance"] = base.get("actual", 0).fillna(0) - base.get("goal", 0).fillna(0)
     base["pct_to_goal"] = base.apply(lambda row: safe_div(row.get("actual"), row.get("goal")), axis=1)
-    base["start_pct"] = base.apply(lambda row: safe_div(row.get("starts"), row.get("enrolled") or row.get("actual")), axis=1)
+    base["start_pct"] = base.apply(lambda row: safe_div(row.get("starts"), first_nonzero(row.get("enrolled"), row.get("actual"))), axis=1)
     return base.sort_values(["sort_order", "term_label"], na_position="last")
 
 
